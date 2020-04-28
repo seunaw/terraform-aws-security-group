@@ -109,6 +109,8 @@ variable "rules" {
     storm-nimbus-tcp     = [6627, 6627, "tcp", "Nimbus"]
     storm-ui-tcp         = [8080, 8080, "tcp", "Storm UI"]
     storm-supervisor-tcp = [6700, 6703, "tcp", "Supervisor"]
+    # Telegraf
+    telegraf-tcp = [8094, 8094, "tcp", "Telegraf"]
     # Web
     web-jmx-tcp = [1099, 1099, "tcp", "JMX"]
     # WinRM

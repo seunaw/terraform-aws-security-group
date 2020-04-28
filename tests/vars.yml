@@ -1,0 +1,5 @@
+sg_name: "terraform-testing-sg"
+vpc_id: "vpc-94cbd2f6"
+region: us-west-2
+description: terraform-testing ssh main
+

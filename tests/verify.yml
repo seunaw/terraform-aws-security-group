@@ -1,0 +1,25 @@
+---
+- set_fact:
+    label: "verify | Security Group |"
+    rules:
+      ssh-tcp: [22, 22, "tcp", "SSH"]
+
+
+- name: "{{ label }} Checking SSH Security Group"
+  ec2_group_info:
+    filters:
+      vpc-id: "{{ vpc_id }}"
+      ip_permission.protocol: tcp 
+      ip_permission.to_port: "22"
+      ip_permission.from_port: "22"
+      ip_permission.cidr: 0.0.0.0/0
+      description: "{{ description }}"
+      "tag:Name": "{{ sg_name }}"
+  register: sg_info
+
+- debug:
+    var: sg_info
+    verbosity: 2
+
+
+
