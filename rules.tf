@@ -39,6 +39,7 @@ variable "rules" {
     # Elasticsearch
     elasticsearch-rest-tcp = [9200, 9200, "tcp", "Elasticsearch REST interface"]
     elasticsearch-java-tcp = [9300, 9300, "tcp", "Elasticsearch Java interface"]
+    filebeats-tcp          = [5400, 5400, "tcp", "Elasticsearch Filebeats"]
     # Grafana
     # @TODO - Change to HTTPS 
     grafana-tcp = [ 3000, 3000, "tcp", "HTTP"]
